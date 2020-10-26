@@ -7,15 +7,15 @@ const fUtil = require('../fileUtil');
 const fw = process.env.FILE_WIDTH;
 const get = require('../request/get');
 const fs = require('fs');
-const themes = {};
-
+const themes = {}
+// isn't it needed?
 function addTheme(id, buffer) {
 	const beg = buffer.indexOf(`theme_id="`) + 10;
 	const end = buffer.indexOf(`"`, beg);
 	const theme = buffer.subarray(beg, end).toString();
 	return themes[id] = theme;
 }
-
+// for stuff, of course.
 function save(id, data) {
 	fs.writeFileSync(fUtil.getFileIndex('char-', '.xml', id), data);
 	addTheme(id, data);
