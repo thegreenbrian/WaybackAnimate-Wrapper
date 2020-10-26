@@ -24,7 +24,7 @@ const tsv = require('./tts/voices');
 const tsl = require('./tts/load');
 const evt = require('./events');
 const url = require('url');
-
+// long coding?
 const functions = [
 	mvL,
 	pmc,
@@ -46,6 +46,8 @@ const functions = [
 	mvu,
 	stp,
 	stl,
+        ija,
+      // doesn't mean it looks like that.
 ];
 
 module.exports = http.createServer((req, res) => {
